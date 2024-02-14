@@ -1,0 +1,22 @@
+/* reset */
+@import url('./reset.css');
+
+/* variable */
+@import url('./variable.css');
+
+/* fonts */
+@import url('./fonts.css');
+
+/* pages */
+@import url('./styles/index.css');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: var(--gray);
+  font-size: 45px;
+}
