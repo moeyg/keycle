@@ -23,12 +23,12 @@
   margin-bottom: 3rem;
 }
 
-#challenger {
+#mainHTML-header #challenger {
   color: var(--light-green);
   font-size: 0.7rem;
 }
 
-#greeting {
+#mainHTML-header #greeting {
   color: white;
   text-align: center;
   font-size: 1rem;
@@ -44,12 +44,12 @@
   justify-content: center;
 }
 
-#quiz-title {
+#mainHTML-main #quiz-title {
   height: 9.5rem;
   margin-bottom: 3rem;
 }
 
-#quiz-descriptions {
+#mainHTML-main #quiz-descriptions {
   margin-bottom: 3rem;
   padding: 1.8rem 2.5rem;
   border-radius: 10px;
@@ -60,14 +60,14 @@
   background-color: var(--light-gray);
 }
 
-.quiz-description {
+#quiz-descriptions .quiz-description {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
 }
 
-.quiz-description::before {
+#quiz-descriptions .quiz-description::before {
   content: '';
   display: inline-block;
   width: 0.8rem;
@@ -76,7 +76,7 @@
   background-size: cover;
 }
 
-#start-button {
+#mainHTML-main #start-button {
   padding: 0.6rem 2rem;
   border: none;
   border-radius: 10px;
