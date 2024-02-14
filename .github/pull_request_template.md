@@ -1,7 +1,7 @@
 ### Issue Number
 해당 PR과 관련된 이슈 번호를 여기에 적어주세요.
 
-### PR Issue
+### PR Issue
 변경된 내용에 대해 간결하게 설명해주세요.
 
 ### PR Type
@@ -13,7 +13,7 @@
 - [ ] 테스트 추가/수정 (chore)
 - [ ] 기타 (other)
 
-### 특이 사항
+### Significant
 리뷰어가 알아야 할 특이 사항이 있다면 여기에 적어주세요.
 
 ### Preview
