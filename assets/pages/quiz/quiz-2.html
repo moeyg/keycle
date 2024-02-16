@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <title>KEYCLE: QUIZ 2</title>
+  </head>
+  <body>
+    <div class="container quiz-page">
+      <div class="quiz-process">
+        <div class="quiz-2-process"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <!-- question chapter icon -->
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/Q/Q2.svg"
+          alt="Question 2"
+        />
+        <!-- question subject -->
+        <h1 class="question">다음 중 음식물 쓰레기는 무엇일까요?</h1>
+      </header>
+
+      <!-- answer sheet -->
+      <ul class="answer-sheet">
+        <div class="answer-list-container">
+          <!-- A -->
+          <li class="answer-list wrong">
+            <span class="answer-letter">A</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q2/watermelon-peel.svg"
+                alt="watermelon peel"
+                id="watermelon-peel"
+                class="answer-image"
+              />
+              <span class="answer-comment">수박 껍질</span>
+            </div>
+          </li>
+          <!-- B -->
+          <li class="answer-list wrong">
+            <span id="letter-B" class="answer-letter">B</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q2/egg-peel.svg"
+                alt="Egg peel"
+                id="egg-peel"
+                class="answer-image"
+              />
+              <span class="answer-comment">달걀 껍데기</span>
+            </div>
+          </li>
+        </div>
+        <div class="answer-list-container">
+          <!-- C -->
+          <li class="answer-list wrong">
+            <span class="answer-letter">C</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q2/onion-peel.svg"
+                alt="Onion peel"
+                id="onion-peel"
+                class="answer-image"
+              />
+              <span class="answer-comment">양파 껍질</span>
+            </div>
+          </li>
+          <!-- D -->
+          <li class="answer-list right">
+            <span class="answer-letter">D</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q2/pineapple-peel.svg"
+                alt="Pineapple peel"
+                id="pineapple-peel"
+                class="answer-image"
+              />
+              <span class="answer-comment">파인애플 껍질</span>
+            </div>
+          </li>
+        </div>
+      </ul>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <button class="button choice-submit-button">다 골랐어요!</button>
+      </footer>
+    </div>
+  </body>
+</html>
