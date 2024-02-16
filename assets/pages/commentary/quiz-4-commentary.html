@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <title>KEYCLE: QUIZ 3</title>
+  </head>
+  <body>
+    <div class="container quiz-page">
+      <div class="quiz-process">
+        <div class="quiz-4-process quiz-process-gauge"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" class="ir" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/Q/Q3.svg"
+          alt="Question 3"
+        />
+        <h1 class="question OX-question">
+          패스트푸드 음료컵의 뚜껑과 빨대는<br />모두 플라스틱으로 버려야 한다.
+        </h1>
+      </header>
+
+      <main class="commentary-container">
+        <!-- Incorrect rate -->
+        <div class="incorrect-rate">
+          <p id="incorrect-rate-contents">
+            오답률<br /><strong id="rate-value">0%</strong>
+          </p>
+          <img
+            id="incorrect-rate-box"
+            src="../../images/icons/rate-box.svg"
+            alt="Incorrect answer rate"
+          />
+        </div>
+
+        <!-- commentary -->
+        <ul class="commentary">
+          <!-- right answer -->
+          <div id="commentary-title">
+            <strong
+              class="letter correct-letter important-value OX-important-value"
+              >X</strong
+            >
+            <h2>
+              정답은
+              <span class="important-value">X</span>예요!
+            </h2>
+          </div>
+
+          <!-- incorrect reason -->
+          <!-- A -->
+          <li class="commentary-list">
+            <p class="incorrect-reason OX-reason">
+              빨대는 작아서 일반쓰레기로 분류돼요.<br />뚜껑은 플라스틱으로,<br />빨대는
+              일반 쓰레기통에 버려주세요!
+            </p>
+          </li>
+        </ul>
+      </main>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <a href="../quiz/quiz-5.html" class="button view-commentary-button"
+          >다음 문제로</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
