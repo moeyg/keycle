@@ -6,23 +6,26 @@
   margin-bottom: 25px;
 }
 
-#watermelon-peel,
-#egg-peel,
-#onion-peel,
-#pineapple-peel {
-  width: 7rem;
+#receipt,
+#seashell {
+  width: 6rem;
 }
 
 /* quiz process */
 
-.quiz-1-process {
-  width: 16.6%;
+.quiz-process-gauge {
   height: 4px;
   background: var(--light-green);
 }
 
+.quiz-1-process {
+  width: 16.6%;
+}
+
 .quiz-2-process {
   width: 33.2%;
-  height: 4px;
-  background: var(--light-green);
+}
+
+.quiz-3-process {
+  width: 50%;
 }
