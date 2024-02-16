@@ -16,7 +16,8 @@
 
 /* quiz */
 @import url('./styles/quiz/quiz.css');
-@import url('./styles/quiz/quiz-1.css');
+@import url('./styles/quiz/commentary.css');
+@import url('./styles/quiz/quiz-detail.css');
 
 body {
   display: flex;
@@ -36,4 +37,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.ir {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }
