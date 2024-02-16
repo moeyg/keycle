@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <title>KEYCLE: QUIZ 1</title>
+  </head>
+  <body>
+    <div class="container quiz-page">
+      <div class="quiz-process">
+        <div class="quiz-1-process"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" class="ir" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/Q/Q1.svg"
+          alt="Question 1"
+        />
+        <h1 class="question">다음 중 일반 종이로 분리배출인 것은?</h1>
+      </header>
+
+      <main class="commentary-container">
+        <!-- Incorrect rate -->
+        <div class="incorrect-rate">
+          <p id="incorrect-rate-contents">
+            오답률<br /><strong id="rate-value">0%</strong>
+          </p>
+          <img
+            id="incorrect-rate-box"
+            src="../../images/icons/rate-box.svg"
+            alt="Incorrect answer rate"
+          />
+        </div>
+
+        <!-- commentary -->
+        <ul class="commentary">
+          <!-- right answer -->
+          <div id="commentary-title">
+            <strong class="letter correct-letter important-value">D</strong>
+            <h2>
+              <span class="important-value">신문지</span>는 일반 종이에 버려요!
+            </h2>
+          </div>
+
+          <!-- incorrect reason -->
+          <!-- A -->
+          <li class="commentary-list">
+            <strong class="letter incorrect-letter">A</strong>
+            <p class="incorrect-reason">
+              전단지는 대부분 비닐이 코팅된 혼합 종이가<br />사용되기 때문에
+              재활용이 불가능해요.
+            </p>
+          </li>
+          <!-- B -->
+          <li class="commentary-list">
+            <strong class="letter incorrect-letter">B</strong>
+            <p class="incorrect-reason">
+              종이팩은 일반폐지와 분리해서 배출해요.<br />종이팩의 내용물을
+              비우고 물로 헹군 뒤<br />펼치고 잘 말려서 종이팩 수거함에 넣어요.
+            </p>
+          </li>
+          <!-- C -->
+          <li class="commentary-list">
+            <strong class="letter incorrect-letter">C</strong>
+            <p class="incorrect-reason">
+              테이크아웃 종이컵은 겉면이 플라스틱으로<br />코팅됐거나 컵 안쪽이
+              비닐 코팅 처리가<br />됐기 때문에 재활용이 어려워요.
+            </p>
+          </li>
+        </ul>
+      </main>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <a href="../quiz/quiz-2.html" class="button view-commentary-button"
+          >다음 문제로</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
