@@ -137,6 +137,13 @@
   color: var(--purple);
 }
 
+.OX-reason-container {
+  width: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* button */
 
 .button {

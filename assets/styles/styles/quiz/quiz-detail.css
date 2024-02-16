@@ -41,3 +41,28 @@
 .quiz-6-process {
   width: 100%;
 }
+
+/* quiz 6 */
+
+#toothbrush {
+  width: 7rem;
+  margin-bottom: -7px;
+}
+
+.Q6-answer-sheet {
+  display: flex;
+  flex-direction: row;
+}
+
+.Q6-answer-list {
+  padding: 45px 0px 30px !important;
+}
+
+.Q6-answer-list .answer-letter {
+  position: static !important;
+  padding: 20px;
+}
+
+.Q6-answer-list .answer-comment {
+  margin: 25px;
+}
