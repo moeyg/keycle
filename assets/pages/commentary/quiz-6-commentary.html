@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <title>KEYCLE: QUIZ 6</title>
+  </head>
+  <body>
+    <div class="container quiz-page">
+      <div class="quiz-process">
+        <div class="quiz-process-gauge"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" class="ir" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/Q/Q6.svg"
+          alt="Question 6"
+        />
+        <h1 class="question OX-question">칫솔은 어디에 버려야 할까요?</h1>
+      </header>
+
+      <main class="commentary-container">
+        <!-- Incorrect rate -->
+        <div class="incorrect-rate">
+          <p id="incorrect-rate-contents">
+            오답률<br /><strong id="rate-value">0%</strong>
+          </p>
+          <img
+            id="incorrect-rate-box"
+            src="../../images/icons/rate-box.svg"
+            alt="Incorrect answer rate"
+          />
+        </div>
+
+        <!-- commentary -->
+        <ul class="commentary">
+          <!-- right answer -->
+          <div id="commentary-title">
+            <strong class="letter correct-letter important-value">A</strong>
+            <h2>
+              정답! 칫솔은
+              <span class="important-value">일반 쓰레기</span>에 버려야 해요!
+            </h2>
+          </div>
+
+          <!-- incorrect reason -->
+          <li class="commentary-list OX-reason-container">
+            <p class="incorrect-reason OX-reason">
+              칫솔 몸체가 고무나 기타 다른 종류들과<br />섞여있는 경우가 많기
+              때문에<br />일반 쓰레기로 버려야 해요.
+            </p>
+          </li>
+        </ul>
+      </main>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <a href="../result.html" class="button view-commentary-button"
+          >결과 보기</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
