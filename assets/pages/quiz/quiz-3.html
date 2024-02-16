@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <title>KEYCLE: QUIZ 3</title>
+  </head>
+  <body>
+    <div class="container quiz-page">
+      <div class="quiz-process">
+        <div class="quiz-3-process quiz-process-gauge"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <!-- question chapter icon -->
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/Q/Q3.svg"
+          alt="Question 3"
+        />
+        <!-- question subject -->
+        <h1 class="question">다음 중 일반 쓰레기가 아닌 것은 무엇일까요?</h1>
+      </header>
+
+      <!-- answer sheet -->
+      <ul class="answer-sheet">
+        <div class="answer-list-container">
+          <!-- A -->
+          <li class="answer-list wrong">
+            <span class="answer-letter">A</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q3/chili-sauce.svg"
+                alt="Chili sauce"
+                id="chili-sauce"
+                class="answer-image"
+              />
+              <span class="answer-comment">장류</span>
+            </div>
+          </li>
+          <!-- B -->
+          <li class="answer-list right">
+            <span id="letter-B" class="answer-letter">B</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q3/air-cap.svg"
+                alt="Air cap"
+                id="air-cap"
+                class="answer-image"
+              />
+              <span class="answer-comment">뽁뽁이</span>
+            </div>
+          </li>
+        </div>
+        <div class="answer-list-container">
+          <!-- C -->
+          <li class="answer-list wrong">
+            <span class="answer-letter">C</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q3/receipt.svg"
+                alt="Receipt"
+                id="receipt"
+                class="answer-image"
+              />
+              <span class="answer-comment">영수증</span>
+            </div>
+          </li>
+          <!-- D -->
+          <li class="answer-list wrong">
+            <span class="answer-letter">D</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q3/seashell.svg"
+                alt="Seashell"
+                id="seashell"
+                class="answer-image"
+              />
+              <span class="answer-comment">조개 껍데기</span>
+            </div>
+          </li>
+        </div>
+      </ul>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <button class="button choice-submit-button" disabled>
+          다 골랐어요!
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>
