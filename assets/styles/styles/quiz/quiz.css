@@ -93,7 +93,55 @@
 }
 
 .answer-list .answer-elements .answer-image {
+  width: 7rem;
   height: 8.5rem;
+}
+
+/* OX sheet */
+
+.OX-question {
+  text-align: center;
+  line-height: 1.4rem;
+}
+
+.OX-sheet {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.OX-sheet .OX-sheet-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.OX-sheet .OX-sheet-contents .answer-OX {
+  margin-top: -15px;
+  color: var(--light-gray);
+  font-size: 10rem;
+  font-family: 'KEYCLE-Regular';
+}
+
+.OX-choice-comment {
+  color: var(--yellow);
+  font-size: 1.3rem;
+  font-family: 'pretendard-Regular';
+}
+
+.OX-choice-box.correct-answer .answer-OX {
+  color: var(--light-green);
+}
+
+.OX-choice-box.incorrect-answer .answer-OX {
+  color: var(--purple);
+}
+
+.OX-reason-container {
+  width: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* button */

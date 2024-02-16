@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <title>KEYCLE: QUIZ 6 result</title>
+  </head>
+  <body>
+    <div class="container quiz-page">
+      <div class="quiz-process">
+        <div class="quiz-process-gauge"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" class="ir" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <!-- answer chapter icon -->
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/A/A6.svg"
+          alt="Answer 6"
+        />
+        <!-- answer subject -->
+        <h1 class="question">
+          정답! 칫솔은 <span id="right-value">일반 쓰레기</span>에 버려야 해요!
+        </h1>
+        <!-- answer image -->
+        <img
+          id="toothbrush"
+          src="../../images/quiz-elements/Q6/toothbrush.svg"
+          alt="Toothbrush"
+        />
+      </header>
+
+      <!-- answer sheet -->
+      <ul class="answer-sheet Q6-answer-sheet">
+        <div class="answer-list-container">
+          <!-- A -->
+          <li class="answer-list right Q6-answer-list correct-answer">
+            <span class="answer-letter">A</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q6/garbage.svg"
+                alt="garbage"
+                id="garbage"
+                class="answer-image"
+              />
+              <span class="answer-comment">일반 쓰레기</span>
+            </div>
+          </li>
+        </div>
+        <div class="answer-list-container">
+          <!-- B -->
+          <li class="answer-list wrong Q6-answer-list">
+            <span class="answer-letter">B</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q6/recycling.svg"
+                alt="Recycling"
+                id="recycling"
+                class="answer-image"
+              />
+              <span class="answer-comment">재활용 쓰레기</span>
+            </div>
+          </li>
+        </div>
+      </ul>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <a
+          href="../commentary/quiz-6-commentary.html"
+          class="button view-commentary-button"
+          >해설 보기</a
+        >
+        <a href="../result.html" class="button next-quiz-button">결과 보기</a>
+      </footer>
+    </div>
+  </body>
+</html>

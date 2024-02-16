@@ -49,6 +49,10 @@
   color: var(--light-green);
 }
 
+.OX-important-value {
+  font-size: 5rem !important;
+}
+
 .letter {
   margin-bottom: 5px;
   font-size: 2rem;
@@ -57,7 +61,7 @@
 
 .commentary-list {
   margin-top: 0.7rem;
-  padding: 1.2rem;
+  padding: 1rem 1.3rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -81,4 +85,9 @@
   font-size: 0.8rem;
   font-family: 'Pretendard-Regular';
   line-height: 1.2rem;
+}
+
+.commentary-list .OX-reason {
+  padding: 2rem;
+  text-align: center;
 }

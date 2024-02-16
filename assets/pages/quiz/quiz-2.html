@@ -10,7 +10,7 @@
   <body>
     <div class="container quiz-page">
       <div class="quiz-process">
-        <div class="quiz-2-process"></div>
+        <div class="quiz-2-process quiz-process-gauge"></div>
       </div>
       <!-- navigation -->
       <nav class="navigation">
@@ -43,12 +43,12 @@
       <ul class="answer-sheet">
         <div class="answer-list-container">
           <!-- A -->
-          <li class="answer-list wrong">
+          <li class="answer-list right">
             <span class="answer-letter">A</span>
             <div class="answer-elements">
               <img
                 src="../../images/quiz-elements/Q2/watermelon-peel.svg"
-                alt="watermelon peel"
+                alt="Watermelon peel"
                 id="watermelon-peel"
                 class="answer-image"
               />
@@ -84,7 +84,7 @@
             </div>
           </li>
           <!-- D -->
-          <li class="answer-list right">
+          <li class="answer-list wrong">
             <span class="answer-letter">D</span>
             <div class="answer-elements">
               <img
@@ -101,7 +101,9 @@
 
       <!-- buttons -->
       <footer class="buttons">
-        <button class="button choice-submit-button">다 골랐어요!</button>
+        <button class="button choice-submit-button" disabled>
+          다 골랐어요!
+        </button>
       </footer>
     </div>
   </body>
