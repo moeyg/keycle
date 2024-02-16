@@ -7,3 +7,8 @@
   font-family: 'Pretendard-SemiBold';
   src: url('../fonts/Pretendard-SemiBold.woff');
 }
+
+@font-face {
+  font-family: 'KEYCLE-Regular';
+  src: url('../fonts/KEYCLE-Regular.woff');
+}

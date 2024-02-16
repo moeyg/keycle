@@ -1,0 +1,28 @@
+/* images */
+
+#takeout-paper-cup,
+#newspaper {
+  height: 6.5rem;
+  margin-bottom: 25px;
+}
+
+#watermelon-peel,
+#egg-peel,
+#onion-peel,
+#pineapple-peel {
+  width: 7rem;
+}
+
+/* quiz process */
+
+.quiz-1-process {
+  width: 16.6%;
+  height: 4px;
+  background: var(--light-green);
+}
+
+.quiz-2-process {
+  width: 33.2%;
+  height: 4px;
+  background: var(--light-green);
+}

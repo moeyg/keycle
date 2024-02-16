@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <title>KEYCLE: QUIZ 2</title>
+  </head>
+  <body>
+    <div class="container quiz-page">
+      <div class="quiz-process">
+        <div class="quiz-2-process"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" class="ir" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/Q/Q2.svg"
+          alt="Question 1"
+        />
+        <h1 class="question">다음 중 음식물 쓰레기는 무엇일까요?</h1>
+      </header>
+
+      <main class="commentary-container">
+        <!-- Incorrect rate -->
+        <div class="incorrect-rate">
+          <p id="incorrect-rate-contents">
+            오답률<br /><strong id="rate-value">0%</strong>
+          </p>
+          <img
+            id="incorrect-rate-box"
+            src="../../images/icons/rate-box.svg"
+            alt="Incorrect answer rate"
+          />
+        </div>
+
+        <!-- commentary -->
+        <ul class="commentary">
+          <!-- right answer -->
+          <div id="commentary-title">
+            <strong class="letter correct-letter important-value">A</strong>
+            <h2>
+              <span class="important-value">수박 껍질</span>은 음식물
+              쓰레기예요!
+            </h2>
+          </div>
+
+          <!-- incorrect reason -->
+          <!-- B -->
+          <li class="commentary-list">
+            <strong id="incorrect-letter-B" class="letter incorrect-letter"
+              >B</strong
+            >
+            <p class="incorrect-reason">
+              계란 등 알의 껍데기는 사료나 퇴비로<br />만들 수 없으므로
+              일반쓰레기로 분류해요.
+            </p>
+          </li>
+          <!-- C -->
+          <li class="commentary-list">
+            <strong class="letter incorrect-letter">C</strong>
+            <p class="incorrect-reason">
+              양파 껍질은 수분이 없고 질겨서<br />다시 활용하기 힘들어요.
+            </p>
+          </li>
+          <!-- D -->
+          <li class="commentary-list">
+            <strong id="incorrect-letter-D" class="letter incorrect-letter"
+              >D</strong
+            >
+            <p class="incorrect-reason">
+              파인애플 껍질 같이 딱딱한 물질은<br />처리시설에서 분쇄할 때 설비
+              고장을<br />일으킬 수 있어 일반쓰레기로 배출해야 해요.
+            </p>
+          </li>
+        </ul>
+      </main>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <a href="../quiz/quiz-2.html" class="button view-commentary-button"
+          >다음 문제로</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
