@@ -13,11 +13,11 @@ def correctRateUpdate(request):
         # 각 문제의 정답수 업데이트
         for questionId, isCorrect in enumerate(list):
             stat = Stats.objects.get(questionId = questionId + 1)
-            stat.total += isCorrect
+            stat.correctAnswer += isCorrect
             stat.save()
         # 전체 문제 수
         stat = Stats.objects.get(questionId = lastNumber)
-        stat.total += 1
+        stat.correctAnswer += 1
         stat.save()
         return JsonResponse({"message" : "success"}, status=200)
     return JsonResponse({"message" : "fail"}, status=403)
