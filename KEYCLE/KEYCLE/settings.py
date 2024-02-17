@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'stats',
     'qrcodes',
     'corsheaders',#cors관련
-    
 ]
 
 MIDDLEWARE = [
