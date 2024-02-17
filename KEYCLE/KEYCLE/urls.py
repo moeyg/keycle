@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('stats/', include('stats.urls')),
     path('', include('qrcodes.urls')),
+    
 ]
