@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/style.css" />
+    <script type="module" src="../../scripts/app.js" defer></script>
     <title>KEYCLE: QUIZ 2 result</title>
   </head>
   <body>
-    <div class="container quiz-page">
+    <div class="container answer-page">
       <div class="quiz-process">
         <div class="quiz-2-process quiz-process-gauge"></div>
       </div>
@@ -36,16 +37,14 @@
           alt="Answer 2"
         />
         <!-- answer subject -->
-        <h1 class="question">
-          정답! <span id="right-value">수박 껍질</span>은 음식물 쓰레기예요!
-        </h1>
+        <h1 class="question"></h1>
       </header>
 
       <!-- answer sheet -->
       <ul class="answer-sheet">
         <div class="answer-list-container">
           <!-- A -->
-          <li class="answer-list right correct-answer">
+          <li class="answer-list right correct-answer A">
             <span class="answer-letter">A</span>
             <div class="answer-elements">
               <img
@@ -58,7 +57,7 @@
             </div>
           </li>
           <!-- B -->
-          <li class="answer-list wrong">
+          <li class="answer-list wrong B">
             <span id="letter-B" class="answer-letter">B</span>
             <div class="answer-elements">
               <img
@@ -73,7 +72,7 @@
         </div>
         <div class="answer-list-container">
           <!-- C -->
-          <li class="answer-list wrong">
+          <li class="answer-list wrong C">
             <span class="answer-letter">C</span>
             <div class="answer-elements">
               <img
@@ -86,7 +85,7 @@
             </div>
           </li>
           <!-- D -->
-          <li class="answer-list wrong">
+          <li class="answer-list wrong D">
             <span class="answer-letter">D</span>
             <div class="answer-elements">
               <img

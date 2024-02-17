@@ -1,4 +1,6 @@
-.quiz-page {
+.quiz-page,
+.answer-page,
+.commentary-page {
   gap: 2rem;
 }
 
