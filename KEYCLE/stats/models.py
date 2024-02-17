@@ -8,4 +8,4 @@ class Stats(models.Model):
 	class Meta:
 		# 모델의 내용이 변경 가능하면 Ture, 변경 불가능하면 False 
 		managed = False
-		db_table = 'Stats'
+		db_table = 'stats'
