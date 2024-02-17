@@ -19,6 +19,9 @@
 @import url('./styles/quiz/commentary.css');
 @import url('./styles/quiz/quiz-detail.css');
 
+/* result */
+@import url('./styles/result.css');
+
 body {
   display: flex;
   align-items: center;
