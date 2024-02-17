@@ -3,6 +3,14 @@ import Quiz from './components/quiz.js';
 import Answer from './components/answer.js';
 import Result from './components/result.js';
 import Timer from './components/timer.js';
+import Statistics from './components/statistics.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const challenger = document.querySelector('#challenger-count');
+  if (challenger) {
+    new Statistics().getStatistics();
+  }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const quizPage = document.querySelector('.quiz-page');
