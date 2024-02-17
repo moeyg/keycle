@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'KEYCLE',
         'USER': 'KEYCLE',
         'PASSWORD': '0000',
-        'HOST': 'localhost',
+        'HOST': '3.37.238.149',
         'PORT': '',
     }
 }
