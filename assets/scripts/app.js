@@ -2,11 +2,13 @@
 import Quiz from './components/quiz.js';
 import Answer from './components/answer.js';
 import Result from './components/result.js';
+import Timer from './components/timer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const quizPage = document.querySelector('.quiz-page');
   if (quizPage) {
     new Quiz();
+    new Timer().startTimer();
   }
 });
 
