@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 from PIL import Image
 from pathlib import Path
-from dotenv import load_dotenv
+import dotenv
 import qrcode, cv2
 import json
 from io import BytesIO
@@ -14,12 +14,12 @@ import urllib.request
 import boto3
 import os
 
-dotenv_path = Path('.env')
-load_dotenv(dotenv_path=dotenv_path)
+# dotenv_path = Path('./.env')
+dotenv.load_dotenv()
 
 AWS_ACCESS_KEY_ID = os.getenv("accesskey")
 AWS_SECRET_ACCESS_KEY = os.getenv("secreatkey")
-AWS_DEFAULT_REGION = "region"
+AWS_DEFAULT_REGION = os.getenv("region")
 
 # Create your views here.
 @csrf_exempt #forbidden csrf cookie not set이 뜬다
@@ -37,7 +37,8 @@ def generate_qrcode(request):
         #현재 이미지 주소
         current_path = Path(__file__).parent
         img_path = current_path / 'kioskImg' / file_name
-        img.save(img_path) 
+        img.save(img_path)
+        print(AWS_ACCESS_KEY_ID) 
         #s3클라이언트 생성
         s3 = boto3.client(
                 service_name='s3',
