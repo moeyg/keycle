@@ -30,15 +30,15 @@ def incorrectRate(request):
         # 전체 문제 수 조회
         lastNumber = Stats.objects.all().count()
         # 전체 응시자 수 조회
-        dominator = Stats.objects.get(id=lastNumber).total
+        dominator = Stats.objects.get(questionId=lastNumber).correctAnswer
         incorrectRate = []
         for questionId in range(1, lastNumber):
             # 각 문제의 오답률 계산
+            stat = Stats.objects.get(questionId = questionId)
             if (dominator == 0):
                 # 응시자가 없을 경우 0으로 처리
                 incorrectRate.append(0)
                 continue
-            stat = Stats.objects.get(questionId = questionId)
-            incorrectRate.append(round(1 - stat.correctAnswer / dominator * 100))
+            incorrectRate.append(round(100 - ((stat.correctAnswer / dominator) * 100)))
         return JsonResponse({"incorrectRate" : incorrectRate}, status=200)
     return JsonResponse({"message" : "fail"}, status=403)
