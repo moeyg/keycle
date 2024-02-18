@@ -32,6 +32,7 @@ def incorrectRate(request):
         # 전체 응시자 수 조회
         dominator = Stats.objects.get(questionId=lastNumber).correctAnswer
         incorrectRate = []
+        incorrectRate.append(dominator)
         for questionId in range(1, lastNumber):
             # 각 문제의 오답률 계산
             stat = Stats.objects.get(questionId = questionId)
