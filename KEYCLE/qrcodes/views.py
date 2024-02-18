@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 from PIL import Image
 from pathlib import Path
+from dotenv import load_dotenv
 import qrcode, cv2
 import json
 from io import BytesIO
@@ -12,6 +13,13 @@ import numpy as np
 import urllib.request
 import boto3
 import os
+
+dotenv_path = Path('.env')
+load_dotenv(dotenv_path=dotenv_path)
+
+AWS_ACCESS_KEY_ID = os.getenv("accesskey")
+AWS_SECRET_ACCESS_KEY = os.getenv("secreatkey")
+AWS_DEFAULT_REGION = "region"
 
 # Create your views here.
 @csrf_exempt #forbidden csrf cookie not set이 뜬다

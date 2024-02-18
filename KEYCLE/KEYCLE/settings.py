@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'KEYCLE.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'KEYCLE',
-        'USER': 'KEYCLE',
-        'PASSWORD': '0000',
+        'NAME': 'keycle',
+        'USER': 'newuser',
+        'PASSWORD': '1234',
         'HOST': '3.37.238.149',
         'PORT': '',
     }
