@@ -22,6 +22,9 @@
 /* result */
 @import url('./styles/result.css');
 
+/* photo */
+@import url('./styles/photo.css');
+
 body {
   display: flex;
   align-items: center;
