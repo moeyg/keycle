@@ -1,0 +1,138 @@
+.photo-container {
+  background: var(--dark-gray);
+  position: relative;
+}
+
+/* frame */
+
+.photo-container #frame {
+  height: 412px;
+  z-index: 1;
+}
+
+#frame,
+#photo-booth {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* photo-box */
+
+#photo-box #camera {
+  width: 255px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  transform: scaleX(-1);
+}
+
+/* frame options */
+
+.frame-options {
+  position: absolute;
+  top: 109%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 0.4rem;
+}
+
+.frame-options .frame-option {
+  padding-top: 1rem;
+  width: 2rem;
+  height: 3rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-green);
+  color: var(--purple);
+  font-size: 1.7rem;
+  font-family: 'KEYCLE-Regular';
+  -webkit-text-stroke: 1.5px black;
+}
+
+.frame-options .frame-option:first-child {
+  color: var(--yellow);
+  background: #d7d7d7;
+}
+
+/* buttons */
+
+#photo-buttons {
+  margin-top: 30rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#photo-buttons .photo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  background: #d7d7d7;
+}
+
+#photo-buttons .photo-button .button-icon {
+  height: 0.9rem;
+}
+
+#photo-buttons .photo-button#shutter {
+  background-color: var(--light-green);
+}
+
+.photo-button:hover,
+.photo-button:focus {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.home-button-setting {
+  margin-top: 4.3rem;
+  background: var(--light-green) !important;
+}
+
+/* countdown */
+#countdown {
+  position: absolute;
+  z-index: 100;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 8rem;
+  opacity: 0.7;
+}
+
+/* qrcode */
+
+#photo-qrcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 127%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#photo-qrcode #qrcode {
+  width: 2.8rem;
+  height: 2.8rem;
+  background: white;
+}
+
+#photo-qrcode #qrcode-info {
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: 'Pretendard-Regular';
+  line-height: 1rem;
+}
