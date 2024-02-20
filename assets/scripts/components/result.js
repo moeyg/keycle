@@ -10,7 +10,7 @@ export default class Result {
 
   calculateCorrectCount() {
     for (let userAnswer of this.userAnswers) {
-      if (userAnswer === true) {
+      if (userAnswer === true || userAnswer === null) {
         this.correctCount += 1;
       }
     }
