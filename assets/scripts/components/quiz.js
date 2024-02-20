@@ -25,6 +25,7 @@ export default class Quiz {
   addOptionListeners() {
     this.options.forEach((choice) => {
       choice.addEventListener('click', () => {
+        this.submitButton.style.backgroundColor = 'var(--light-green)';
         this.handleOptionSelection(choice);
       });
     });
@@ -41,7 +42,7 @@ export default class Quiz {
 
     if (choice.classList.contains('right')) {
       this.userAnswers[this.index] = true;
-    } else if (choice.classList.contains('wrong')) {
+    } else {
       this.userAnswers[this.index] = false;
     }
 
