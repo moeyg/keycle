@@ -10,7 +10,7 @@ export default class Result {
 
   calculateCorrectCount() {
     for (let userAnswer of this.userAnswers) {
-      if (userAnswer === true) {
+      if (userAnswer === true || userAnswer === null) {
         this.correctCount += 1;
       }
     }
@@ -30,7 +30,7 @@ export default class Result {
       const storedAnswers = localStorage.getItem('userAnswers');
       const userAnswers = storedAnswers ? JSON.parse(storedAnswers) : [];
 
-      fetch('3.37.238.149/stats/incorrectRateUpdate', {
+      fetch('http://3.37.238.149/stats/incorrectRateUpdate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,6 @@ export default class Result {
           console.error('사용자 답안 전송 에러:', error);
         });
 
-      localStorage.clear();
       window.location.href = '../../index.html';
     });
   }
