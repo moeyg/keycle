@@ -8,6 +8,13 @@ import IncorrectRate from './components/incorrectRate.js';
 import Photo from './components/photo.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const indexPage = document.querySelector('#index-container');
+  if (indexPage) {
+    localStorage.clear();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const challenger = document.querySelector('#challenger-count');
   if (challenger) {
     new Statistics().getStatistics();
