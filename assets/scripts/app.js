@@ -4,12 +4,20 @@ import Answer from './components/answer.js';
 import Result from './components/result.js';
 import Timer from './components/timer.js';
 import Statistics from './components/statistics.js';
+import IncorrectRate from './components/incorrectRate.js';
 import Photo from './components/photo.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const challenger = document.querySelector('#challenger-count');
   if (challenger) {
     new Statistics().getStatistics();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const commentaryPage = document.querySelector('.commentary-page');
+  if (commentaryPage) {
+    new IncorrectRate().setIncorrectRate();
   }
 });
 
