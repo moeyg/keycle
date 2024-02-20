@@ -41,7 +41,7 @@ export default class Quiz {
 
     if (choice.classList.contains('right')) {
       this.userAnswers[this.index] = true;
-    } else if (choice.classList.contains('wrong')) {
+    } else {
       this.userAnswers[this.index] = false;
     }
 
