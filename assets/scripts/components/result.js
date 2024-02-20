@@ -52,7 +52,6 @@ export default class Result {
           console.error('사용자 답안 전송 에러:', error);
         });
 
-      localStorage.clear();
       window.location.href = '../../index.html';
     });
   }
