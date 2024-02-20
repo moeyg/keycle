@@ -4,12 +4,12 @@ export default class Statistics {
   }
 
   updateChallengerCount(challenger) {
-    const challengerCount = document.getElementById('challenger-count');
-    challengerCount.textContent = challenger;
+    const challengerCount = document.querySelector('#challenger-count');
+    challengerCount.innerText = challenger;
   }
 
   getStatistics() {
-    return fetch('3.37.238.149/stats/incorrectRate')
+    return fetch('http://3.37.238.149/stats/incorrectRate')
       .then((response) => {
         if (!response.ok) {
           throw new Error('서버에서 데이터를 가져오지 못했습니다.');
@@ -17,8 +17,9 @@ export default class Statistics {
         return response.json();
       })
       .then((data) => {
-        const challenger = data[0];
-        const incorrectRate = data.slice(1);
+        const dataArray = Array.from(data.incorrectRate);
+        const challenger = dataArray[0];
+        const incorrectRate = dataArray.slice(1);
         this.saveIncorrectRate(incorrectRate);
         this.updateChallengerCount(challenger);
         return { challenger, incorrectRate };
