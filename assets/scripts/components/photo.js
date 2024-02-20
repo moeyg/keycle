@@ -6,10 +6,12 @@ export default class Photo {
     this.frameCream = document.querySelector('#frame-cream');
     this.frameDark = document.querySelector('#frame-dark');
     this.photoContainer = document.querySelector('.photo-container');
+    this.qrcode = document.querySelector('#qrcode');
     this.qrcodeInfo = document.querySelector('#qrcode-info');
     this.countdownElement = document.querySelector('#countdown');
     this.frame = document.querySelector('#frame');
     this.frameURL = '../images/frame/';
+    this.selectedFrame = 'frameDark';
 
     this.frameCream.addEventListener('click', this.setFrameCream.bind(this));
     this.frameDark.addEventListener('click', this.setFrameDark.bind(this));
@@ -25,6 +27,7 @@ export default class Photo {
       this.frameCream,
       this.frameDark
     );
+    this.selectedFrame = 'frameCream';
   }
 
   setFrameDark() {
@@ -36,6 +39,7 @@ export default class Photo {
       this.frameDark,
       this.frameCream
     );
+    this.selectedFrame = 'frameDark';
   }
 
   setFrame(
@@ -67,9 +71,23 @@ export default class Photo {
   }
 
   takePhoto() {
-    this.canvas.width = 400;
-    this.canvas.height = 600;
+    this.prepareCanvas();
+    this.captureImage();
+    this.uploadImage();
+    this.handleUIChanges();
+  }
 
+  prepareCanvas() {
+    if (this.selectedFrame === 'frameDark') {
+      this.canvas.width = 400;
+      this.canvas.height = 600;
+    } else if (this.selectedFrame === 'frameCream') {
+      this.canvas.width = 400;
+      this.canvas.height = 550;
+    }
+  }
+
+  captureImage() {
     const sourceX = (this.camera.videoWidth - this.canvas.width) / 2;
     const sourceY = (this.camera.videoHeight - this.canvas.height) / 2;
     const context = this.canvas.getContext('2d');
@@ -89,15 +107,17 @@ export default class Photo {
       this.canvas.height
     );
     context.restore();
+  }
 
+  uploadImage() {
     const imageData = this.canvas.toDataURL('image/png', 1.0);
     const blobData = this.dataURItoBlob(imageData);
     const formData = new FormData();
 
     formData.append('file', blobData, this.generateRandomString());
-    formData.append('frame', '1');
+    formData.append('frame', this.selectedFrame);
 
-    fetch('API', {
+    fetch('http://3.37.238.149:8000/qrcodes/qrcode', {
       method: 'POST',
       body: formData,
     })
@@ -105,16 +125,19 @@ export default class Photo {
         if (!response.ok) {
           throw new Error('이미지 업로드 실패');
         }
-        return response.text();
+        return response.blob();
       })
-      .then((data) => {
-        console.log('이미지 업로드 성공:', data);
-        localStorage.setItem('QRcode', data);
+      .then((blob) => {
+        console.log('이미지 업로드 성공');
+        this.qrcode.src = URL.createObjectURL(blob);
+        localStorage.setItem('QRcode', blob);
       })
       .catch((error) => {
         console.error('이미지 업로드 에러:', error);
       });
+  }
 
+  handleUIChanges() {
     this.camera.pause();
 
     const frameOptions = document.querySelector('.frame-options');
