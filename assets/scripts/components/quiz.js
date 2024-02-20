@@ -25,6 +25,7 @@ export default class Quiz {
   addOptionListeners() {
     this.options.forEach((choice) => {
       choice.addEventListener('click', () => {
+        this.submitButton.style.backgroundColor = 'var(--light-green)';
         this.handleOptionSelection(choice);
       });
     });
