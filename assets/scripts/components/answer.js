@@ -13,7 +13,7 @@ export default class Answer {
 
   checkAnswer() {
     if (this.correctOption === this.selectedOption) {
-      this.question.innerHTML = `정답! 정답은 <span id="right-value">${this.correctAnswer}</span>예요!`;
+      this.question.innerHTML = `딩동댕! 정답은 <span id="right-value">${this.correctAnswer}</span>예요!`;
     } else {
       this.question.innerHTML = `땡! 정답은 <span id="right-value">${this.correctAnswer}</span>예요!`;
       this.incorrectAnswer.classList.add('incorrect-answer');
