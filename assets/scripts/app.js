@@ -8,49 +8,37 @@ import IncorrectRate from './components/incorrectRate.js';
 import Photo from './components/photo.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const indexPage = document.querySelector('#index-container');
-  if (indexPage) {
-    localStorage.clear();
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
   const challenger = document.querySelector('#challenger-count');
   if (challenger) {
     new Statistics().getStatistics();
   }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const commentaryPage = document.querySelector('.commentary-page');
-  if (commentaryPage) {
-    new IncorrectRate().setIncorrectRate();
+  const indexPage = document.querySelector('#index-container');
+  if (indexPage) {
+    localStorage.clear();
   }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
   const quizPage = document.querySelector('.quiz-page');
   if (quizPage) {
     new Quiz();
     new Timer().startTimer();
   }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
   const answerPage = document.querySelector('.answer-page');
   if (answerPage) {
     new Answer().checkAnswer();
   }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  const commentaryPage = document.querySelector('.commentary-page');
+  if (commentaryPage) {
+    new IncorrectRate().setIncorrectRate();
+  }
+
   const resultPage = document.querySelector('.result-container');
   if (resultPage) {
     new Result().run();
   }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
   const photoPage = document.querySelector('.photo-container');
   if (photoPage) {
     // 카메라 접근
