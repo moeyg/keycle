@@ -13,12 +13,12 @@ def incorrectRateUpdate(request):
         list = inputData.get('userAnswers', [])
         # 각 문제의 정답수 업데이트
         for questionId, isCorrect in enumerate(list):
-            stat = Stats.objects.get(questionId = questionId + 1)
-            stat.correctAnswer += isCorrect
+            stat = Stats.objects.get(question_id = questionId + 1)
+            stat.correct_answer += isCorrect
             stat.save()
         # 전체 문제 수 업데이트
-        stat = Stats.objects.get(questionId = lastNumber)
-        stat.correctAnswer += 1
+        stat = Stats.objects.get(question_id = lastNumber)
+        stat.correct_answer += 1
         stat.save()
         return JsonResponse({"message" : "success"}, status=200)
     return JsonResponse({"message" : "fail"}, status=403)
@@ -30,16 +30,16 @@ def incorrectRate(request):
         # 전체 문제 수 조회
         lastNumber = Stats.objects.all().count()
         # 전체 응시자 수 조회
-        dominator = Stats.objects.get(questionId=lastNumber).correctAnswer
+        dominator = Stats.objects.get(question_id=lastNumber).correct_answer
         incorrectRate = []
         incorrectRate.append(dominator)
         for questionId in range(1, lastNumber):
             # 각 문제의 오답률 계산
-            stat = Stats.objects.get(questionId = questionId)
+            stat = Stats.objects.get(question_id = questionId)
             if (dominator == 0):
                 # 응시자가 없을 경우 0으로 처리
                 incorrectRate.append(0)
                 continue
-            incorrectRate.append(round(100 - ((stat.correctAnswer / dominator) * 100)))
+            incorrectRate.append(round(100 - ((stat.correct_answer / dominator) * 100)))
         return JsonResponse({"incorrectRate" : incorrectRate}, status=200)
     return JsonResponse({"message" : "fail"}, status=403)
