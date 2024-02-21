@@ -25,6 +25,9 @@
 /* photo */
 @import url('./styles/photo.css');
 
+/* animation */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 body {
   display: flex;
   align-items: center;
@@ -35,6 +38,8 @@ body {
   background-color: var(--gray);
   font-family: 'Pretendard-SemiBold';
   font-size: 45px;
+  animation: fadeIn;
+  animation-duration: 0.8s;
 }
 
 .container {

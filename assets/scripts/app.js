@@ -53,4 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new Photo();
   }
+
+  const reset = document.querySelector('#navigation-title');
+  if (reset)
+    reset.addEventListener('click', () => {
+      window.location.href = '/index.html';
+    });
 });
