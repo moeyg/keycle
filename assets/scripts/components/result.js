@@ -28,7 +28,7 @@ export default class Result {
       const storedAnswers = localStorage.getItem('userAnswers');
       const userAnswers = storedAnswers ? JSON.parse(storedAnswers) : [];
 
-      fetch('http://3.37.238.149/stats/incorrectRateUpdate', {
+      fetch('http://3.37.238.149:8000/stats/incorrectRateUpdate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
