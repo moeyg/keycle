@@ -17,10 +17,8 @@ export default class Result {
   }
 
   renderScore() {
-    if (this.correctCount) {
-      this.quizCard.src = `${this.imageSource}cards/card-${this.correctCount}.svg`;
-      this.qrcode.src = `${this.imageSource}qrcode/qrcode-${this.correctCount}.svg`;
-    }
+    this.quizCard.src = `${this.imageSource}cards/card-${this.correctCount}.svg`;
+    this.qrcode.src = `${this.imageSource}qrcode/qrcode-${this.correctCount}.svg`;
   }
 
   submitUserAnswers() {
