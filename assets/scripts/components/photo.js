@@ -117,7 +117,7 @@ export default class Photo {
     formData.append('file', blobData, this.generateRandomString());
     formData.append('frame', this.selectedFrame);
 
-    fetch('http://3.37.238.149:8000/qrcodes/qrcode', {
+    fetch('https://3.37.238.149.nip.io/qrcodes/qrcode', {
       method: 'POST',
       body: formData,
     })
