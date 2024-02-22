@@ -36,7 +36,7 @@ def generate_qrcode(request):
         img = Image.open(file)
         #현재 이미지 주소
         current_path = Path(__file__).parent
-        img_path = current_path / 'kioskImg' / file_name
+        img_path = current_path / 'keycleImg' / file_name
         img.save(img_path)
         print(AWS_ACCESS_KEY_ID) 
         #s3클라이언트 생성
@@ -50,7 +50,7 @@ def generate_qrcode(request):
             s3.upload_file(img_path,"keycle-image",file_name)
         except Exception as e : print(e)
         imageUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/'+file_name
-        frameUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/frame'+str(frame)+'.png'
+        frameUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/'+frame+'.png'
         #이미지 합성하기 코드 *짜야함*
 
         # URL에서 이미지 데이터 불러오기
@@ -69,9 +69,13 @@ def generate_qrcode(request):
         image2 = cv2.imdecode(arr, -1)
         height, width, channels = image2.shape
 
-        target_size = (400, 600)
-        resize_image2 = cv2.resize(image2,target_size)
-        # # image1과 image2의 크기가 동일하다고 가정하고, 둘 다 RGBA 형태라고 가정
+        if frame == 'frameDark':
+            target_size = (400,600)
+            resize_image2 = cv2.resize(image2,target_size)
+        elif frame == 'frameCream':
+            target_size = (400,550)
+            resize_image2 = cv2.resize(image2,target_size)
+        # image1과 image2의 크기가 동일하다고 가정하고, 둘 다 RGBA 형태라고 가정
         image1_rgba = cv2.cvtColor(image1, cv2.COLOR_RGB2RGBA)
         image2_rgba = cv2.cvtColor(resize_image2, cv2.COLOR_RGB2RGBA)
         # image2의 alpha 채널을 가져옴
@@ -94,10 +98,10 @@ def generate_qrcode(request):
         except Exception as e : print(e)
         imageUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/qr_'+file_name
         images = qrcode.make(imageUrl)
-        img_path = current_path / 'kioskImg'/'qr.jpg'
+        img_path = current_path / 'keycleImg'/'qr.jpg'
         images.save(img_path)
         # 이미지 파일 경로
-        img_path = current_path / 'kioskImg'/'qr.jpg'
+        img_path = current_path / 'keycleImg'/'qr.jpg'
 
         # 이미지 파일을 바이트 데이터로 읽기
         with open(img_path, 'rb') as f:
