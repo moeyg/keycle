@@ -109,7 +109,7 @@ export default class Photo {
     context.restore();
   }
 
-  uploadImage() {
+  async uploadImage() {
     const imageData = this.canvas.toDataURL('image/png', 1.0);
     const blobData = this.dataURItoBlob(imageData);
     const formData = new FormData();
@@ -117,24 +117,24 @@ export default class Photo {
     formData.append('file', blobData, this.generateRandomString());
     formData.append('frame', this.selectedFrame);
 
-    fetch('https://3.37.238.149.nip.io/qrcodes/qrcode', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('이미지 업로드 실패');
+    try {
+      const response = await fetch(
+        'https://3.37.238.149.nip.io/qrcodes/qrcode',
+        {
+          method: 'POST',
+          body: formData,
         }
-        return response.blob();
-      })
-      .then((blob) => {
-        console.log('이미지 업로드 성공');
-        this.qrcode.src = URL.createObjectURL(blob);
-        localStorage.setItem('QRcode', blob);
-      })
-      .catch((error) => {
-        console.error('이미지 업로드 에러:', error);
-      });
+      );
+      if (!response.ok) {
+        throw new Error('네트워크 응답 에러');
+      }
+      const blob = await response.blob();
+      this.qrcode.src = URL.createObjectURL(blob);
+      localStorage.setItem('QRcode', blob);
+    } catch (error) {
+      console.log(error);
+      throw new Error('이미지 업로드 실패');
+    }
   }
 
   handleUIChanges() {

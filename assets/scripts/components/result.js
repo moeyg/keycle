@@ -24,34 +24,34 @@ export default class Result {
   submitUserAnswers() {
     this.homeButton.addEventListener('click', (event) => {
       event.preventDefault();
-
-      const storedAnswers = localStorage.getItem('userAnswers');
-      const userAnswers = storedAnswers ? JSON.parse(storedAnswers) : [];
-
-      fetch('https://3.37.238.149.nip.io/stats/incorrectRateUpdate', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userAnswers }),
-      })
-        .then((response) => {
-          console.log(response);
-
-          if (!response.ok) {
-            throw new Error('사용자 답안 전송 실패');
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log('사용자 답안 전송 성공:', data);
-        })
-        .catch((error) => {
-          console.error('사용자 답안 전송 에러:', error);
-        });
-
+      this.postUserAnswers();
       window.location.href = '../../index.html';
     });
+  }
+
+  async postUserAnswers() {
+    const storedAnswers = localStorage.getItem('userAnswers');
+    const userAnswers = storedAnswers ? JSON.parse(storedAnswers) : [];
+
+    try {
+      const response = await fetch(
+        'https://3.37.238.149.nip.io/stats/incorrectRateUpdate',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userAnswers }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error('네트워크 응답 에러');
+      }
+      return await response.json();
+    } catch (error) {
+      console.log(error);
+      throw new Error('답안 전송 실패');
+    }
   }
 
   run() {
