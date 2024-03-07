@@ -1,20 +1,21 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .models import Stats
 import json
 
 # 오답률 업데이트 함수
-@api_view(['POST'])
+@api_view(['POST', 'PATCH'])
 def incorrectRateUpdate(request):
-    if request.method == 'POST':
+    if request.method == 'POST' or request.method == 'PATCH':
         lastNumber = Stats.objects.all().count()
         inputData = json.loads(request.body.decode('utf-8'))
         list = inputData.get('userAnswers', [])
         # 각 문제의 정답수 업데이트
-        for questionId, isCorrect in enumerate(list):
-            stat = Stats.objects.get(question_id = questionId + 1)
-            stat.correct_answer += isCorrect
+        for question_id, is_correct in enumerate(list):
+            stat = Stats.objects.get(question_id = question_id + 1)
+            stat.correct_answer += is_correct
             stat.save()
         # 전체 문제 수 업데이트
         stat = Stats.objects.get(question_id = lastNumber)
