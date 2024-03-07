@@ -14,7 +14,6 @@ import urllib.request
 import boto3
 import os
 
-# dotenv_path = Path('./.env')
 dotenv.load_dotenv()
 
 AWS_ACCESS_KEY_ID = os.getenv("accesskey")
@@ -38,7 +37,6 @@ def generate_qrcode(request):
         current_path = Path(__file__).parent
         img_path = current_path / 'keycleImg' / file_name
         img.save(img_path)
-        print(AWS_ACCESS_KEY_ID) 
         #s3클라이언트 생성
         s3 = boto3.client(
                 service_name='s3',
@@ -46,7 +44,7 @@ def generate_qrcode(request):
                 aws_access_key_id = AWS_ACCESS_KEY_ID,
                 aws_secret_access_key = AWS_SECRET_ACCESS_KEY,
             )
-        try: 
+        try:
             s3.upload_file(img_path,"keycle-image",file_name)
         except Exception as e : print(e)
         imageUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/'+file_name
@@ -70,7 +68,7 @@ def generate_qrcode(request):
         height, width, channels = image2.shape
 
         if frame == 'frameDark':
-            target_size = (400,600)
+            target_size = (400, 600)
             resize_image2 = cv2.resize(image2,target_size)
         elif frame == 'frameCream':
             target_size = (400,550)
@@ -87,10 +85,10 @@ def generate_qrcode(request):
 
         # 결과 이미지는 float32 형태이므로 uint8로 변환
         combined = combined.astype(np.uint8)
-        
+
         # 합친 이미지 저장하기
         cv2.imwrite('image.png', combined) #현재 경로에 image라는 이름으로 저장장
-        try: 
+        try:
             s3.upload_file('image.png',"keycle-image",'qr_'+file_name) #qr을 붙인 파일이름으로 저장!
             s3.delete_object(Bucket='keycle-image', Key=file_name)
             if os.path.isfile(img_path):
@@ -98,18 +96,20 @@ def generate_qrcode(request):
         except Exception as e : print(e)
         imageUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/qr_'+file_name
         images = qrcode.make(imageUrl)
-        img_path = current_path / 'keycleImg'/'qr.jpg'
+        img_path = current_path / 'keycleImg'/'qr.png'
         images.save(img_path)
         # 이미지 파일 경로
-        img_path = current_path / 'keycleImg'/'qr.jpg'
+        img_path = current_path / 'keycleImg'/'qr.png'
 
         # 이미지 파일을 바이트 데이터로 읽기
         with open(img_path, 'rb') as f:
             image_data = f.read()
 
         # HttpResponse 객체에 이미지 데이터 담아서 리턴
-        return HttpResponse(image_data, content_type="image/jpeg")
-    
+        response = HttpResponse(image_data, content_type="image/png")
+        response["Access-Control-Allow-Origin"] = "*"
+        return response
+
 #점수 기준으로 큐알코드 날려주기 => 큐알저장해서 프론트에 저장후 사용함
 @csrf_exempt 
 def scoreQrcode(request):
@@ -120,7 +120,7 @@ def scoreQrcode(request):
         current_path = Path(__file__).parent
         imagesUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/score'+str(score)+'.png'
         images = qrcode.make(imagesUrl)
-        img_path = current_path / 'kioskImg'/'score.png'
+        img_path = current_path / 'keycleImg'/'score.png'
         images.save(img_path)
         #이미지 리턴해주기
         return HttpResponseRedirect(imagesUrl)
