@@ -33,16 +33,18 @@ export default class Result {
     const storedAnswers = localStorage.getItem('userAnswers');
     const userAnswers = storedAnswers ? JSON.parse(storedAnswers) : [];
 
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ userAnswers }),
+    };
+
     try {
       const response = await fetch(
         'https://3.37.238.149.nip.io/stats/incorrectRateUpdate',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ userAnswers }),
-        }
+        config
       );
       if (!response.ok) {
         throw new Error('네트워크 응답 에러');
