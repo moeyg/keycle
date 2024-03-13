@@ -117,13 +117,15 @@ export default class Photo {
     formData.append('file', blobData, this.generateRandomString());
     formData.append('frame', this.selectedFrame);
 
+    const config = {
+      method: 'POST',
+      body: formData,
+    };
+
     try {
       const response = await fetch(
         'https://3.37.238.149.nip.io/qrcodes/qrcode',
-        {
-          method: 'POST',
-          body: formData,
-        }
+        config
       );
       if (!response.ok) {
         throw new Error('네트워크 응답 에러');
@@ -156,8 +158,8 @@ export default class Photo {
     const stringLength = 10;
     let randomstring = '';
     for (let i = 0; i < stringLength; i++) {
-      let randomIdex = Math.floor(Math.random() * charset.length);
-      randomstring += charset.substring(randomIdex, randomIdex + 1);
+      let randomIndex = Math.floor(Math.random() * charset.length);
+      randomstring += charset.substring(randomIndex, randomIndex + 1);
     }
     return randomstring + '.png';
   }
