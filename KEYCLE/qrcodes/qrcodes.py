@@ -40,7 +40,7 @@ def imageCombine(file_name, frame):
     frameUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/'+frame+'.png'
     #사진 처리
     with urllib.request.urlopen(imageUrl) as url:
-            s = url.read()
+        s = url.read()
     # 데이터를 numpy 배열로 변환
     arr = np.asarray(bytearray(s), dtype=np.uint8)
     # numpy 배열을 이미지로 변환
@@ -67,11 +67,10 @@ def imageCombine(file_name, frame):
     alpha = np.expand_dims(alpha, axis=2)
     # image1과 image2를 합침. image2의 alph 채널을 활용
     combined = (1.0 - alpha) * image1_rgba + alpha * image2_rgba
-    # 결과 이미지는 float32 형태이므로 uint8로 변환
     combined = combined.astype(np.uint8)
     cv2.imwrite('image.png', combined) #현재 경로에 image라는 이름으로 저장장
 
-def imageRemoveAndS3Save(file_name,s3):
+def imageRemoveAndS3Save(file_name,s3,img_path):
     current_path = Path(__file__).parent
     try:
         s3.upload_file('image.png',"keycle-image",'qr_'+file_name) #qr을 붙인 파일이름으로 저장!

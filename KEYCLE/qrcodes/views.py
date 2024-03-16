@@ -31,7 +31,7 @@ def generate_qrcode(request):
         s3 = s3SaveImage(img_path,file_name)
         #이미지 합성하기
         imageCombine(file_name,frame)
-        image_data = imageRemoveAndS3Save(file_name,s3)
+        image_data = imageRemoveAndS3Save(file_name,s3,img_path)
         # HttpResponse 객체에 이미지 데이터 담아서 리턴
         response = HttpResponse(image_data, content_type="image/png")
         response["Access-Control-Allow-Origin"] = "*"
