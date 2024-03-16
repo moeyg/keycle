@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .qrcodes import uploadedImage
+from .qrcodes import uploadedImage,s3SaveImage,imageCombine,imageRemoveAndS3Save
 
 from django.http import HttpResponse,HttpResponseRedirect
 from rest_framework.response import Response
@@ -15,12 +15,6 @@ import urllib.request
 import boto3
 import os
 
-dotenv.load_dotenv()
-
-AWS_ACCESS_KEY_ID = os.getenv("accesskey")
-AWS_SECRET_ACCESS_KEY = os.getenv("secreatkey")
-AWS_DEFAULT_REGION = os.getenv("region")
-
 # Create your views here.
 @csrf_exempt #forbidden csrf cookie not set이 뜬다
 def generate_qrcode(request):
@@ -34,73 +28,10 @@ def generate_qrcode(request):
         current_path = Path(__file__).parent
         img_path = current_path / 'keycleImg' / file_name
         #s3클라이언트 생성
-        s3 = boto3.client(
-                service_name='s3',
-                region_name=AWS_DEFAULT_REGION,
-                aws_access_key_id = AWS_ACCESS_KEY_ID,
-                aws_secret_access_key = AWS_SECRET_ACCESS_KEY,
-            )
-        try:
-            s3.upload_file(img_path,"keycle-image",file_name)
-        except Exception as e : print(e)
-        imageUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/'+file_name
-        frameUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/'+frame+'.png'
-        #이미지 합성하기 코드 *짜야함*
-
-        # URL에서 이미지 데이터 불러오기
-        with urllib.request.urlopen(imageUrl) as url:
-            s = url.read()
-
-        # 데이터를 numpy 배열로 변환
-        arr = np.asarray(bytearray(s), dtype=np.uint8)
-
-        # numpy 배열을 이미지로 변환
-        image1 = cv2.imdecode(arr, -1)
-
-        with urllib.request.urlopen(frameUrl) as url:
-            s = url.read()
-        arr = np.asarray(bytearray(s), dtype=np.uint8)
-        image2 = cv2.imdecode(arr, -1)
-        height, width, channels = image2.shape
-
-        if frame == 'frameDark':
-            target_size = (400, 600)
-            resize_image2 = cv2.resize(image2,target_size)
-        elif frame == 'frameCream':
-            target_size = (400,550)
-            resize_image2 = cv2.resize(image2,target_size)
-        # image1과 image2의 크기가 동일하다고 가정하고, 둘 다 RGBA 형태라고 가정
-        image1_rgba = cv2.cvtColor(image1, cv2.COLOR_RGB2RGBA)
-        image2_rgba = cv2.cvtColor(resize_image2, cv2.COLOR_RGB2RGBA)
-        # image2의 alpha 채널을 가져옴
-        alpha = image2_rgba[:, :, 3] / 255.0
-        alpha = np.expand_dims(alpha, axis=2)
-
-        # image1과 image2를 합침. image2의 alph 채널을 활용
-        combined = (1.0 - alpha) * image1_rgba + alpha * image2_rgba
-
-        # 결과 이미지는 float32 형태이므로 uint8로 변환
-        combined = combined.astype(np.uint8)
-
-        # 합친 이미지 저장하기
-        cv2.imwrite('image.png', combined) #현재 경로에 image라는 이름으로 저장장
-        try:
-            s3.upload_file('image.png',"keycle-image",'qr_'+file_name) #qr을 붙인 파일이름으로 저장!
-            s3.delete_object(Bucket='keycle-image', Key=file_name)
-            if os.path.isfile(img_path):
-                os.remove(img_path)
-        except Exception as e : print(e)
-        imageUrl = 'https://keycle-image.s3.ap-northeast-2.amazonaws.com/qr_'+file_name
-        images = qrcode.make(imageUrl)
-        img_path = current_path / 'keycleImg'/'qr.png'
-        images.save(img_path)
-        # 이미지 파일 경로
-        img_path = current_path / 'keycleImg'/'qr.png'
-
-        # 이미지 파일을 바이트 데이터로 읽기
-        with open(img_path, 'rb') as f:
-            image_data = f.read()
-
+        s3 = s3SaveImage(img_path,file_name)
+        #이미지 합성하기
+        imageCombine(file_name,frame)
+        image_data = imageRemoveAndS3Save(file_name,s3)
         # HttpResponse 객체에 이미지 데이터 담아서 리턴
         response = HttpResponse(image_data, content_type="image/png")
         response["Access-Control-Allow-Origin"] = "*"
