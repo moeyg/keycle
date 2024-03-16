@@ -1,9 +1,10 @@
 from django.shortcuts import render
+from .qrcodes import uploadedImage
 
 from django.http import HttpResponse,HttpResponseRedirect
 from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
-from PIL import Image
+from PIL import Image #
 from pathlib import Path
 import dotenv
 import qrcode, cv2
@@ -28,15 +29,10 @@ def generate_qrcode(request):
             return HttpResponse('No file part')
         file = request.FILES['file']
         file_name = file.name
-        print(file_name)
         frame = request.POST.get('frame')
-        print(frame)
-        #이미지 임시저장 테스트
-        img = Image.open(file)
-        #현재 이미지 주소
+        uploadedImage(file) #이미지 로컬 저장
         current_path = Path(__file__).parent
         img_path = current_path / 'keycleImg' / file_name
-        img.save(img_path)
         #s3클라이언트 생성
         s3 = boto3.client(
                 service_name='s3',
