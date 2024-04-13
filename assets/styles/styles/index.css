@@ -1,0 +1,56 @@
+/* header */
+
+#title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+#title #title-image {
+  height: 4rem;
+}
+
+#title #title-comment {
+  color: white;
+  font-size: 0.6rem;
+  font-family: 'Pretendard-SemiBold';
+}
+
+/* main */
+
+#select-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+.select-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.8rem 1.8rem;
+  border-radius: 10px;
+  color: var(--yellow);
+  font-size: 1rem;
+  background-color: var(--light-gray);
+  text-decoration: none;
+}
+
+.select-button .button-image {
+  height: 7rem;
+}
+
+.select-button:hover {
+  color: var(--light-gray);
+  background-color: var(--yellow);
+}
+
+/* footer */
+
+#clover {
+  height: 0.4rem;
+}

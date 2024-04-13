@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script type="module" src="../../scripts/app.js" defer></script>
+    <title>KEYCLE: QUIZ 5</title>
+  </head>
+  <body>
+    <div class="container commentary-page">
+      <div class="quiz-process">
+        <div class="quiz-5-process quiz-process-gauge"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" class="ir" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/Q/Q5.svg"
+          alt="Question 3"
+        />
+        <h1 class="question OX-question">도자기, 사기는 재활용 쓰레기이다.</h1>
+      </header>
+
+      <main class="commentary-container">
+        <!-- Incorrect rate -->
+        <div class="incorrect-rate">
+          <p id="incorrect-rate-contents">
+            오답률<br /><strong id="rate-value">0%</strong>
+          </p>
+          <img
+            id="incorrect-rate-box"
+            src="../../images/icons/rate-box.svg"
+            alt="Incorrect answer rate"
+          />
+        </div>
+
+        <!-- commentary -->
+        <ul class="commentary">
+          <!-- right answer -->
+          <div id="commentary-title">
+            <strong class="letter correct-letter important-value">X</strong>
+            <h2>
+              정답은
+              <span class="important-value">X</span>예요!
+            </h2>
+          </div>
+
+          <!-- incorrect reason -->
+          <li class="commentary-list OX-reason-container">
+            <p class="incorrect-reason OX-reason">
+              유리그릇은 재활용이 되지만,<br />
+              도자기와 사기는 일반쓰레기예요.
+            </p>
+          </li>
+        </ul>
+      </main>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <a href="../quiz/quiz-6.html" class="button view-commentary-button"
+          >다음 문제로</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

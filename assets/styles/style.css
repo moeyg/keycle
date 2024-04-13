@@ -1,0 +1,60 @@
+/* reset */
+@import url('./reset.css');
+
+/* variable */
+@import url('./variable.css');
+
+/* fonts */
+@import url('./fonts.css');
+
+/* pages */
+@import url('./styles/index.css');
+@import url('./styles/main.css');
+
+/* navigation */
+@import url('./styles/components/navigation.css');
+
+/* quiz */
+@import url('./styles/quiz/quiz.css');
+@import url('./styles/quiz/commentary.css');
+@import url('./styles/quiz/quiz-detail.css');
+
+/* result */
+@import url('./styles/result.css');
+
+/* photo */
+@import url('./styles/photo.css');
+
+/* animation */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: var(--gray);
+  font-family: 'Pretendard-SemiBold';
+  font-size: 45px;
+  animation: fadeIn;
+  animation-duration: 0.8s;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ir {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}

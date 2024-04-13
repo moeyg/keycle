@@ -1,0 +1,78 @@
+.result-container {
+  margin-top: -1rem;
+}
+
+/* header */
+
+#resultHTML-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 3rem;
+}
+
+#resultHTML-header #result-title {
+  height: 1.7rem;
+}
+
+#resultHTML-header #comment {
+  color: white;
+  font-size: 1rem;
+}
+
+/* main */
+
+#resultHTML-main {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#resultHTML-main .quiz-card {
+  height: 13rem;
+}
+
+.qrcode-container {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.qrcode-container .qrcode {
+  height: 3rem;
+}
+
+.qrcode-container .qrcode-comment {
+  color: white;
+  font-size: 1rem;
+  font-family: 'pretendard-Regular';
+  line-height: 1.3rem;
+}
+
+/* footer */
+
+#home-button {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--light-gray);
+  background: var(--light-green);
+  text-decoration: none;
+}
+
+#home-button:hover,
+#home-button:focus {
+  opacity: 0.7;
+}
+
+#home-button #home-button-icon {
+  height: 1rem;
+  position: relative;
+  top: -1.5px;
+}
