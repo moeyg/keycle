@@ -27,7 +27,28 @@
 > 🧑🏻‍💻 Frontend 박도겸 | Backend 김가언 | Backend 김혜림 | 👩🏻‍🎨 Design by 최재정
 
 <br>
+<hr>
+<br>
+
+# 프로젝트 기간
+
+_🗓️ 2024. 02. 14 ~ 2024. 02. 24_
+
+<br>
+<hr>
+<br>
 
 # KEYCLE 전시 소개 영상
 
 <img src=".github/KEYCLE.gif" width="800px">
+
+<br>
+<hr>
+<br>
+
+# 트러블 슈팅
+
+- [Response JSON 파싱 에러](https://fast-colony-5b0.notion.site/JSON-c57bd7bac01846e0a34526d79c8ee210?pvs=4)
+- [s3 키 파일 관련 오류](https://fast-colony-5b0.notion.site/s3-2882589d603f4ee8a8263a740e026a8a?pvs=4)
+- [카메라 권한 에러](https://fast-colony-5b0.notion.site/a765925b721c452aaabe4f3b54bfed1e?pvs=4)
+- [managy.py runserver 실행 에러](https://fast-colony-5b0.notion.site/managy-py-runserver-a50e055c4767467db62d1593e5324d45?pvs=4)
