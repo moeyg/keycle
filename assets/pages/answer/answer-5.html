@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script type="module" src="../../scripts/app.js" defer></script>
+    <title>KEYCLE: QUIZ 5 result</title>
+  </head>
+  <body>
+    <div class="container answer-page">
+      <div class="quiz-process">
+        <div class="quiz-5-process quiz-process-gauge"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" class="ir" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <!-- answer chapter icon -->
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/A/A5.svg"
+          alt="Answer 5"
+        />
+        <!-- answer subject -->
+        <h1 class="question"></h1>
+      </header>
+
+      <!-- OX sheet -->
+      <ul class="answer-sheet OX-sheet">
+        <div class="answer-list-container OX-sheet-contents">
+          <!-- O -->
+          <li class="answer-list wrong OX-choice-box O">
+            <span class="answer-letter ir answer-comment">O</span>
+            <div class="answer-elements">
+              <strong class="answer-OX">O</strong>
+            </div>
+          </li>
+          <span class="answer-O OX-choice-comment">O</span>
+        </div>
+        <div class="answer-list-container OX-sheet-contents">
+          <!-- X -->
+          <li class="answer-list right OX-choice-box correct-answer X">
+            <span class="answer-letter ir answer-comment">X</span>
+            <div class="answer-elements">
+              <strong class="answer-OX">X</strong>
+            </div>
+          </li>
+          <span class="answer-X OX-choice-comment">X</span>
+        </div>
+      </ul>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <a
+          href="../commentary/quiz-5-commentary.html"
+          class="button view-commentary-button"
+          >해설 보기</a
+        >
+        <a href="../quiz/quiz-6.html" class="button next-quiz-button"
+          >다음 문제로</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

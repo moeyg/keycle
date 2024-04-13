@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script type="module" src="../../scripts/app.js" defer></script>
+    <title>KEYCLE: QUIZ 1 result</title>
+  </head>
+  <body>
+    <div class="container answer-page">
+      <div class="quiz-process">
+        <div class="quiz-1-process quiz-process-gauge"></div>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <div id="timer-container">
+          <svg id="timer" class="ir" viewBox="0 0 100 100">
+            <circle id="gauge" cx="50" cy="50" r="22.5"></circle>
+            <circle id="inner-circle" cx="50" cy="50" r="22.5"></circle>
+          </svg>
+          <img id="home-in-timer" src="../../images/icons/home.svg" alt="" />
+        </div>
+        <img
+          id="navigation-title"
+          src="../../images/icons/title.svg"
+          alt="KEYCLE title"
+        />
+      </nav>
+
+      <header class="question-container">
+        <!-- answer chapter icon -->
+        <img
+          class="chapter"
+          src="../../images/quiz-chapter-icons/A/A1.svg"
+          alt="Answer 1"
+        />
+        <!-- answer subject -->
+        <h1 class="question"></h1>
+      </header>
+
+      <!-- answer sheet -->
+      <ul class="answer-sheet">
+        <div class="answer-list-container">
+          <!-- A -->
+          <li class="answer-list wrong A">
+            <span class="answer-letter">A</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q1/market-flyer.svg"
+                alt="Market flyer"
+                id="market-flyer"
+                class="answer-image"
+              />
+              <span class="answer-comment">마트 전단지</span>
+            </div>
+          </li>
+          <!-- B -->
+          <li class="answer-list wrong B">
+            <span id="letter-B" class="answer-letter">B</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q1/milk-carton.svg"
+                alt="Mike carton"
+                id="milk-carton"
+                class="answer-image"
+              />
+              <span class="answer-comment">우유팩</span>
+            </div>
+          </li>
+        </div>
+        <div class="answer-list-container">
+          <!-- C -->
+          <li class="answer-list wrong C">
+            <span class="answer-letter">C</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q1/takeout-paper-cup.svg"
+                alt="Takeout paper cup"
+                id="takeout-paper-cup"
+                class="answer-image"
+              />
+              <span class="answer-comment">테이크아웃 종이컵</span>
+            </div>
+          </li>
+          <!-- D -->
+          <li class="answer-list right correct-answer">
+            <span class="answer-letter D">D</span>
+            <div class="answer-elements">
+              <img
+                src="../../images/quiz-elements/Q1/newspaper.svg"
+                alt="Newspaper"
+                id="newspaper"
+                class="answer-image"
+              />
+              <span class="answer-comment">신문지</span>
+            </div>
+          </li>
+        </div>
+      </ul>
+
+      <!-- buttons -->
+      <footer class="buttons">
+        <a
+          href="../commentary/quiz-1-commentary.html"
+          class="button view-commentary-button"
+          >해설 보기</a
+        >
+        <a href="../quiz/quiz-2.html" class="button next-quiz-button"
+          >다음 문제로</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

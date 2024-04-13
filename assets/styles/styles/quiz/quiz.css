@@ -1,0 +1,209 @@
+.quiz-page,
+.answer-page,
+.commentary-page {
+  gap: 2rem;
+}
+
+.quiz-process {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--dark-gray);
+}
+
+/* header */
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.question-container .chapter {
+  height: 2rem;
+}
+
+.question-container .question {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* answer sheet */
+
+.answer-sheet {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.answer-sheet .answer-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.answer-sheet .answer-list {
+  width: 10rem;
+  height: 11rem;
+  padding: 5px;
+  border: 1px solid var(--dark-gray);
+  border-radius: 10px;
+  background: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-sheet .answer-list .answer-letter {
+  position: relative;
+  top: 8px;
+  left: -65px;
+  color: white;
+  font-size: 1.8rem;
+  font-family: 'KEYCLE-Regular';
+}
+
+.answer-letter#letter-B {
+  left: -60px;
+}
+
+.answer-sheet .answer-list .answer-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-elements .answer-comment {
+  position: relative;
+  top: -15px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.7rem;
+  background: black;
+}
+
+.answer-list .answer-elements .answer-image {
+  width: 7rem;
+  height: 8.5rem;
+}
+
+/* OX sheet */
+
+.OX-question {
+  text-align: center;
+  line-height: 1.4rem;
+}
+
+.OX-sheet {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.OX-sheet .OX-sheet-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.OX-sheet .OX-sheet-contents .answer-OX {
+  color: var(--light-gray);
+  font-size: 10rem;
+  font-family: 'KEYCLE-Regular';
+}
+
+.OX-choice-comment {
+  color: var(--yellow);
+  font-size: 1.3rem;
+  font-family: 'pretendard-Regular';
+}
+
+.OX-choice-box.correct-answer .answer-OX {
+  color: var(--light-green);
+}
+
+.OX-choice-box.incorrect-answer .answer-OX {
+  color: var(--purple);
+}
+
+.OX-reason-container {
+  width: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* button */
+
+.button {
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background: var(--disabled-gray);
+  font-family: 'Pretendard-Regular';
+}
+
+.choice-submit-button:hover,
+.choice-submit-button:focus {
+  cursor: pointer;
+  background: var(--light-green);
+}
+
+.choice-submit-button:disabled {
+  cursor: auto;
+  background: var(--disabled-gray);
+}
+
+.view-commentary-button {
+  text-decoration: none;
+  background: var(--light-green);
+}
+
+.next-quiz-button {
+  text-decoration: none;
+  background: var(--yellow);
+}
+
+.view-commentary-button:hover,
+.next-quiz-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* answer type */
+
+.incorrect-answer {
+  border: 1.5px solid var(--purple) !important;
+}
+
+.incorrect-answer .answer-letter {
+  color: var(--purple) !important;
+}
+
+.correct-answer {
+  border: 1.5px solid var(--light-green) !important;
+}
+
+.correct-answer .answer-letter {
+  color: var(--light-green) !important;
+}
+
+/* result */
+#right-value {
+  color: var(--light-green);
+}

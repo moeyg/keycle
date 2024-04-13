@@ -1,0 +1,93 @@
+.commentary-container {
+  margin-bottom: -3px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  background: var(--dark-gray);
+}
+
+/* Incorrect rate */
+
+.incorrect-rate {
+  position: absolute;
+  top: -4rem;
+  left: 19.2rem;
+}
+
+.incorrect-rate #incorrect-rate-contents {
+  position: relative;
+  top: 58px;
+  text-align: center;
+  font-size: 0.6rem;
+  line-height: 15px;
+}
+
+.incorrect-rate #incorrect-rate-contents #rate-value {
+  font-size: 1.2rem;
+}
+
+.incorrect-rate #incorrect-rate-box {
+  height: 5rem;
+}
+
+/* commentary*/
+
+#commentary-title {
+  margin-bottom: 1.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: white;
+  font-size: 1rem;
+}
+
+.important-value {
+  color: var(--light-green);
+}
+
+.OX-important-value {
+  font-size: 5rem !important;
+}
+
+.letter {
+  margin-bottom: 5px;
+  font-size: 2rem;
+  font-family: 'KEYCLE-Regular';
+}
+
+.commentary-list {
+  margin-top: 0.7rem;
+  padding: 1rem 1.3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background: var(--dark);
+}
+
+.commentary-list .incorrect-letter {
+  color: var(--purple);
+  width: 4rem;
+}
+
+.commentary-list .incorrect-letter#incorrect-letter-B {
+  font-size: 1.8rem;
+}
+.commentary-list .incorrect-letter#incorrect-letter-D {
+  font-size: 2.3rem;
+}
+
+.commentary-list .incorrect-reason {
+  color: white;
+  font-size: 0.8rem;
+  font-family: 'Pretendard-Regular';
+  line-height: 1.2rem;
+}
+
+.commentary-list .OX-reason {
+  padding: 2rem;
+  text-align: center;
+}
