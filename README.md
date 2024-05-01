@@ -97,7 +97,7 @@ KEYCLE은 분리배출에 대한 관심과 이해도를 높이는 서비스로, 
 
 <br><br>
 
-## Preview
+## ‣ Preview
 
 <img src=".github/project-images/preview-1.png">
 <img src=".github/project-images/preview-2.png">
@@ -115,13 +115,13 @@ KEYCLE은 분리배출에 대한 관심과 이해도를 높이는 서비스로, 
 
 <br><br>
 
-## API specification
+## ‣ API specification
 
 📝 [API 명세서](https://fast-colony-5b0.notion.site/API-specification-583594a2f0e54847b51309062fa6ccd3?pvs=4)
 
 <br><br>
 
-## Troubleshooting
+## ‣ Troubleshooting
 
 - [Response JSON 파싱 에러](https://fast-colony-5b0.notion.site/JSON-c57bd7bac01846e0a34526d79c8ee210?pvs=4)
 - [s3 키 파일 관련 오류](https://fast-colony-5b0.notion.site/s3-2882589d603f4ee8a8263a740e026a8a?pvs=4)
@@ -130,6 +130,6 @@ KEYCLE은 분리배출에 대한 관심과 이해도를 높이는 서비스로, 
 
 <br><br>
 
-## KEYCLE 전시 소개 영상
+## ‣ KEYCLE 전시 소개 영상
 
 <img src=".github/project-images/KEYCLE.gif" width="1200px">
