@@ -106,7 +106,7 @@ _작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있�
 
 ## KEYCLE 전시 소개 영상
 
-<img src=".github/KEYCLE.gif" width="800px">
+<img src=".github/KEYCLE.gif" width="100%">
 
 <br>
 <hr>
