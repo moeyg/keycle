@@ -1,6 +1,17 @@
 # KEYCLE
 
-🔗 [KEYCLE](https://3.37.238.149.nip.io/) <br>
+<img src='.github/project-images/title.png'>
+
+<br>
+
+## ‣ KEYCLE Link
+
+🔗 [KEYCLE](https://3.37.238.149.nip.io/)
+
+<br>
+
+## ‣ Figma & Notion
+
 🎨 [Figma](https://www.figma.com/file/TgeyEEfPHx0ch09OqpnEgR/%E2%9A%A1%EF%B8%8F?type=design&node-id=603-4022&mode=design&t=cVF4G8rUDlqEVkhf-0) <br>
 📝 [Notion](https://fast-colony-5b0.notion.site/KEYCLE-d4a1c4016c1146e2be2dfbf3459df359?pvs=4)
 
@@ -22,19 +33,19 @@ _작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있�
 
 ## ‣ 프로젝트 목적과 기대 효과 및 세부 사항
 
-### ♻️ 목적
+#### ♻️ 목적
 
 ```
 전시 관람객이 분리배출 지식을 재미있게 습득하고 흥미를 가질 수 있도록 체험형 게임 Ui를 개발합니다.
 ```
 
-### ♻️ 기대 효과
+#### ♻️ 기대 효과
 
 ```
 관람객은 퀴즈를 풀며 자연스럽게 올바른 분리배출 방법에 대해 학습할 수 있습니다. 또한 본인의 분리배출 점수를 공유하고 간직할 수 있습니다.
 ```
 
-### ♻️ 세부 사항
+#### ♻️ 세부 사항
 
 ```
 ✅ 분리배출 퀴즈
@@ -55,44 +66,41 @@ _작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있�
 🗓️ 2024. 02. 14 ~ 2024. 02. 24
 ```
 
-<img src="./.github/Timeline.png" width="600px">
+<img src=".github/project-images/Timeline.png" width="600px">
 
 <br><br>
 
-## 프로젝트 구성원
+## ‣ 프로젝트 구성원
 
-> 🧑🏻‍💻 Frontend [박도겸](https://github.com/moeyg)
->
-> 🧑🏻‍💻 Backend [김가언](https://github.com/Gaeon)
->
-> 🧑🏻‍💻 Backend [김혜림](https://github.com/hyerim108)
->
-> 👩🏻‍🎨 Design by 키클모아태산
+🧑🏻‍💻 Frontend [박도겸](https://github.com/moeyg) <br>
+🧑🏻‍💻 Backend [김가언](https://github.com/Gaeon) <br>
+🧑🏻‍💻 Backend [김혜림](https://github.com/hyerim108) <br>
+👩🏻‍🎨 Design by 키클모아태산
 
 <br><br>
 
-## Stack & Tools
+## ‣ Stack & Tools
 
-### Develop Languages
+#### Develop Languages
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-### Frameworks, Platforms and Libraries
+#### Frameworks, Platforms and Libraries
 
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 
-### Database
+#### Database
 
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
-### Hosting
+#### Hosting
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-### Design
+#### Design
 
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
@@ -100,31 +108,23 @@ _작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있�
 
 ## Preview
 
-<br>
-<hr>
-<br>
+<br><br>
 
-## KEYCLE 전시 소개 영상
+## API specification
 
-<img src=".github/KEYCLE.gif" width="100%">
+📝 [API 명세서](https://fast-colony-5b0.notion.site/API-specification-583594a2f0e54847b51309062fa6ccd3?pvs=4)
 
-<br>
-<hr>
-<br>
+<br><br>
 
-## 트러블 슈팅
+## Troubleshooting
 
 - [Response JSON 파싱 에러](https://fast-colony-5b0.notion.site/JSON-c57bd7bac01846e0a34526d79c8ee210?pvs=4)
 - [s3 키 파일 관련 오류](https://fast-colony-5b0.notion.site/s3-2882589d603f4ee8a8263a740e026a8a?pvs=4)
 - [HTTPS: 카메라 권한 에러 / Hotspot 접속 에러](https://fast-colony-5b0.notion.site/a765925b721c452aaabe4f3b54bfed1e?pvs=4)
 - [managy.py runserver 실행 에러](https://fast-colony-5b0.notion.site/managy-py-runserver-a50e055c4767467db62d1593e5324d45?pvs=4)
 
-<br>
-<hr>
-<br>
+<br><br>
 
-## File Tree
+## KEYCLE 전시 소개 영상
 
-```
-
-```
+<img src=".github/project-images/KEYCLE.gif" width="1200px">
