@@ -17,6 +17,36 @@
 
 <br>
 
+## ‣ 프로젝트 구성원
+
+|              Frontend              |              Backend               |                Backend                 |    Design    |
+| :--------------------------------: | :--------------------------------: | :------------------------------------: | :----------: |
+| [박도겸](https://github.com/moeyg) | [김가언](https://github.com/Gaeon) | [김혜림](https://github.com/hyerim108) | 키클모아태산 |
+
+<br><br>
+
+## ‣ Stack & Tools
+
+| **Develop Languages** |
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) |
+
+| **Frameworks, Platforms and Libraries** |
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)|
+
+| **Database** |
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
+| **Hosting** |
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) |
+
+| **Design** |
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) |
+
+<br><br>
+
 ## ‣ 프로젝트 소개
 
 _♻️ KeepCycle, KEYCLE!_ <br> <b>_in a row, the past and the present_<:><br>
@@ -67,41 +97,6 @@ _작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있�
 ```
 
 <img src=".github/project-images/Timeline.png">
-
-<br><br>
-
-## ‣ 프로젝트 구성원
-
-|              Frontend              |              Backend               |                Backend                 |    Design    |
-| :--------------------------------: | :--------------------------------: | :------------------------------------: | :----------: |
-| [박도겸](https://github.com/moeyg) | [김가언](https://github.com/Gaeon) | [김혜림](https://github.com/hyerim108) | 키클모아태산 |
-
-<br><br>
-
-## ‣ Stack & Tools
-
-#### Develop Languages
-
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
-#### Frameworks, Platforms and Libraries
-
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
-
-#### Database
-
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-
-#### Hosting
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-#### Design
-
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 <br><br>
 
