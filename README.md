@@ -4,26 +4,26 @@
 
 <br>
 
-## ‣ KEYCLE Link
+## ‣ KEYCLE Service Link
 
-🔗 [KEYCLE](https://3.37.238.149.nip.io/)
+> 🔗 [KEYCLE](https://3.37.238.149.nip.io/)
 
 <br>
 
 ## ‣ Figma & Notion
 
-🎨 [Figma](https://www.figma.com/file/TgeyEEfPHx0ch09OqpnEgR/%E2%9A%A1%EF%B8%8F?type=design&node-id=603-4022&mode=design&t=cVF4G8rUDlqEVkhf-0) <br>
-📝 [Notion](https://fast-colony-5b0.notion.site/KEYCLE-d4a1c4016c1146e2be2dfbf3459df359?pvs=4)
+> 🎨 [Figma](https://www.figma.com/file/TgeyEEfPHx0ch09OqpnEgR/%E2%9A%A1%EF%B8%8F?type=design&node-id=603-4022&mode=design&t=cVF4G8rUDlqEVkhf-0) <br>
+> 📝 [Notion](https://fast-colony-5b0.notion.site/KEYCLE-d4a1c4016c1146e2be2dfbf3459df359?pvs=4)
 
 <br>
 
 ## ‣ 프로젝트 구성원
 
-|              Frontend              |              Backend               |                Backend                 |    Design    |
+|            🧑🏻‍💻 Frontend             |             🧑🏻‍💻 Backend             |               🧑🏻‍💻 Backend               |  👩🏻‍🎨 Design   |
 | :--------------------------------: | :--------------------------------: | :------------------------------------: | :----------: |
 | [박도겸](https://github.com/moeyg) | [김가언](https://github.com/Gaeon) | [김혜림](https://github.com/hyerim108) | 키클모아태산 |
 
-<br><br>
+<br>
 
 ## ‣ Stack & Tools
 
@@ -54,15 +54,17 @@
 
 ## ‣ 프로젝트 소개
 
-_♻️ KeepCycle, KEYCLE!_ <br> <b>_in a row, the past and the present_<:><br>
+_♻️ KeepCycle, KEYCLE!_ <br> <b>_in a row, the past and the present_<br>
 
-우리가 살아가고 있는 현재, 그리고 살아가야 할 미래에 필요한 것은 무엇인가요? <br>
-과거부터 현재까지, 인류는 지속 가능한 삶을 위한 노력과 변화를 경험해 왔습니다. <br>
-KEYCLE 프로젝트는 현재의 환경 문제에 대한 인식을 높이고, 미래를 위한 작은 노력을 위해 기획했습니다. <br>
-KEYCLE은 분리배출에 대한 관심과 이해도를 높이는 서비스로, 쓰레기 처리에 대한 새로운 시각을 제안합니다. <br>
-관람객이 전시를 통해 분리배출의 중요성을 느낄 수 있도록 하여, 개개인의 작은 노력이 큰 변화를 이끌어낼 수 있기를 희망합니다. <br>
+```
+우리가 살아가고 있는 현재, 그리고 살아가야 할 미래에 필요한 것은 무엇인가요?
+과거부터 현재까지, 인류는 지속 가능한 삶을 위한 노력과 변화를 경험해 왔습니다.
+KEYCLE 프로젝트는 현재의 환경 문제에 대한 인식을 높이고, 미래를 위한 작은 노력을 위해 기획했습니다.
+KEYCLE은 분리배출에 대한 관심과 이해도를 높이는 서비스로, 쓰레기 처리에 대한 새로운 시각을 제안합니다.
+관람객이 전시를 통해 분리배출의 중요성을 느낄 수 있도록 하여, 개개인의 작은 노력이 큰 변화를 이끌어낼 수 있기를 희망합니다.
 
-_작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있도록._
+        - 작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있도록.
+```
 
 <br><br>
 
@@ -95,6 +97,14 @@ _작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있�
 
 <br><br>
 
+## Preview
+
+<img src=".github/project-images/preview-1.png">
+<img src=".github/project-images/preview-2.png">
+<img src=".github/project-images/preview-3.png">
+
+<br><br>
+
 ## ‣ 프로젝트 기간
 
 ```
@@ -102,10 +112,6 @@ _작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있�
 ```
 
 <img src=".github/project-images/Timeline.png">
-
-<br><br>
-
-## Preview
 
 <br><br>
 
