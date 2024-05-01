@@ -66,16 +66,15 @@ _작은 노력들이 모여서 지속 가능한 미래를 만들어갈 수 있�
 🗓️ 2024. 02. 14 ~ 2024. 02. 24
 ```
 
-<img src=".github/project-images/Timeline.png" width="600px">
+<img src=".github/project-images/Timeline.png">
 
 <br><br>
 
 ## ‣ 프로젝트 구성원
 
-🧑🏻‍💻 Frontend [박도겸](https://github.com/moeyg) <br>
-🧑🏻‍💻 Backend [김가언](https://github.com/Gaeon) <br>
-🧑🏻‍💻 Backend [김혜림](https://github.com/hyerim108) <br>
-👩🏻‍🎨 Design by 키클모아태산
+|              Frontend              |              Backend               |                Backend                 |    Design    |
+| :--------------------------------: | :--------------------------------: | :------------------------------------: | :----------: |
+| [박도겸](https://github.com/moeyg) | [김가언](https://github.com/Gaeon) | [김혜림](https://github.com/hyerim108) | 키클모아태산 |
 
 <br><br>
 
