@@ -104,8 +104,8 @@ KEYCLE은 분리배출에 대한 관심과 이해도를 높이는 서비스로, 
 ## ‣ Preview
 
 <img src=".github/project-images/preview-1.png">
-<img src=".github/project-images/preview-2.png">
 <img src=".github/project-images/preview-3.png">
+<img src=".github/project-images/preview-2.png">
 
 <br><br>
 
