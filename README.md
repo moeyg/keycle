@@ -106,7 +106,13 @@ KEYCLE은 분리배출에 대한 관심과 이해도를 높이는 서비스로, 
  • 사용자가 카메라를 통해 사진을 찍을 때 두 가지 프레임 중 선택하여 사진을 꾸밀 수 있도록 합니다. <br />
  • 사용자는 사진을 QR 코드로 전송받아 다운로드하여 저장할 수 있습니다. <br />
 
-<br>
+<br />
+
+## Display
+
+<img src="https://github.com/user-attachments/assets/a3ef5df6-e009-4e56-a60b-f16514c44319" width=100%>
+
+<br />
 
 ## Preview
 
