@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="#preview">
-    <img src="https://github.com/user-attachments/assets/01bd3500-7ba5-4671-bca7-cbf05817d9f8" width=100%>
+    <img src="https://github.com/user-attachments/assets/5e7366ee-a069-4611-8140-554ef86013a4" width=100%>
   </a>
   <br />
 </div>
